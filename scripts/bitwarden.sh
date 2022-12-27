@@ -19,7 +19,7 @@ EOF
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SCRIPT_NAME=$(basename "$0")
 SCRIPT_PATH="$DIR/$SCRIPT_NAME"
-BITWARDEN_SCRIPT_URL="https://go.btwrdn.co/bw-sh"
+BITWARDEN_SCRIPT_URL="https://raw.githubusercontent.com/btravouillon/self-host/dns-gandi/bitwarden.sh"
 
 if curl -L -s -w "http_code %{http_code}" -o $SCRIPT_PATH.1 $BITWARDEN_SCRIPT_URL | grep -q "^http_code 20[0-9]"
 then
